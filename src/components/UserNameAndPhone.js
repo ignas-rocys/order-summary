@@ -1,8 +1,8 @@
 const UserNameAndPhone = ({name, phone, handleDelete}) => {
     return (
-        <section>
-            <p>Name: {name} Phone: <b>{phone}</b></p>
-            <button onClick={ handleDelete }> Delete </button>
+        <section className="section">
+            <p><b>Name</b>: {name} <b>Phone</b> : {phone}</p>
+            <button className="button btn-del" onClick={ handleDelete }> Delete </button>
         </section>
     )
 }

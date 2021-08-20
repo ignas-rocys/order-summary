@@ -19,10 +19,15 @@ const deleteContact = (id) => {
     return request.then((response) => response.data)
 }
 
+const updateContact = (phoneToUpdate, id) => {
+    const request = axios.update(`${baseUrl}/${id}`);
+    return request.then((response) => response.data)
+}
 const phoneServices = { 
     getAll,
     addNew,
-    deleteContact
+    deleteContact,
+    updateContact
    };
 
 export default  phoneServices;

@@ -1,8 +1,8 @@
 
-const Content = (props) => {
+const Content = ({children, className}) => {
   return (
-    <main className="content">
-      {props.children}
+    <main className={`content ${className}`}>
+      {children}
     </main>
   );
 };

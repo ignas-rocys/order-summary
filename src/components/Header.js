@@ -1,6 +1,6 @@
 const Header = (props) => {
   return (
-    <header
+    <header className="header"
       style={{
         fontSize: "20px",
         fontWeight: "bold",

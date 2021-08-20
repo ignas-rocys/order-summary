@@ -5,28 +5,18 @@ import Button from './Button';
 const Form = (props) => {
     const [collectingUserInfo, setCollectingUserInfo] = useState({})
     return (
-        <form onSubmit={(e) => {
+        <form className="form" onSubmit={(e) => {
             props.handleSubmit(e,collectingUserInfo);
         }}>
-            <label style={{
-                display: 'flex',
-                flexDirection: 'row',
-                height: '20px',
-                alignItems: 'center'
-            }}>
+            <label className="label">
                 <p>Name</p> 
                 <Input onChange={(e) => {setCollectingUserInfo({...collectingUserInfo, name: e.target.value})}} type={'text'} placeholder={'Name'}/>
             </label>
-            <label style={{
-                display: 'flex',
-                flexDirection: 'row',
-                height: '20px',
-                alignItems: 'center'
-            }}>
+            <label className="label">
                 <p>Number</p>
                 <Input onChange={(e) => {setCollectingUserInfo({...collectingUserInfo, phone: e.target.value})} } type={'number'} placeholder={'Phone number'}/>
             </label>
-            <Button type="submit" name={'Add new'}/>
+            <Button className={'btn-add'} type="submit" name={'Add new'}/>
         </form>
     )
 }
